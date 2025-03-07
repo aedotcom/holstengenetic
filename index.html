@@ -1,222 +1,351 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.2.2/css/dataTables.semanticui.css">
+   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
+   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css">
+   <link rel="stylesheet" type="text/css" href="main.css">
+   <title>제3세대 자율형 젖소 K-스마트축사 통합관리</title>
+  </head>
+ 
+  <!-- JS Library Dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/dataTables.semanticui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DataTables Examples</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+ 
+  <body>
 
-    <!-- 
-    <link rel="stylesheet" type="text/css" href="vendor/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" type="text/css" href="vendor/css/responsive.dataTables.min.css">
-    <link rel="stylesheet" type="text/css" href="Semantic/semantic.min.css"> -->
-
-    <link rel="stylesheet" type="text/css"href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css">
+  <div class ="CowList">
+  <h1>K-스마트축사 통합관리 리스트</h1>
   
-    <link rel="stylesheet" type="text/css" href="css/main.css">
- <!--
-    <script src='vendor/js/jquery-3.3.1.min.js'></script>
-    <script src="vendor/js/jquery.dataTables.js"></script>
-    <script src="vendor/js/dataTables.responsive.min.js"></script>
-    <script src="vendor/js/dataTables.buttons.min.js"></script>
-	<script src="vendor/js/buttons.html5.min.js"></script>
-   <script src="Semantic/semantic.min.js"></script>-->
-   <!-- JS Library Dependencies -->
-   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-   <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-   <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
-   <script src="https://cdn.datatables.net/1.10.25/js/dataTables.semanticui.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
-   <script src="js/main.js"></script>
-</head>
-
-<body>
-    <div class="wrap">
-        <h1>제3세대 자율형 젖소 K-스마트축사 통합관리</h1>
-
-        <div class="blue large ui buttons">
-            <button class="ui   button">Holstein</button>
-            <button class="ui   button ">Jersy</button>
-        </div>
-
-        <div class="ui divider"></div>
-
-        <div class="ui large buttons">
-            <button class="ui button">Active Marketing</button>
-            <div class="or"></div>
-            <button class="ui button">Value Bulls</button>
-            <div class="or"></div>
-            <button class="ui button">Sell Out</button>
-        </div>
-
-        <div class="ui divider"></div>
-
-        <button class="ui facebook button">
-            <i class="facebook icon"></i>
-            Facebook
-        </button>
-        <button class="ui twitter button">
-            <i class="twitter icon"></i>
-            Twitter
-        </button>
-<!--
-        <div class="ui floating dropdown labeled icon button">
-            <i class="list icon"></i>
-            <span class="text">EcoFeed</span>
-            <div class="menu">
-              <div class="item">Plus</div>
-              <div class="item">helfer</div>
-              <div class="item">cow</div>
-            </div>
-        </div>
-
-        <div class="ui floating dropdown labeled icon button">
-            <i class="list icon"></i>
-            <span class="text">Designated Sires</span>
-            <div class="menu">
-              <div class="item">Kappa BB</div>
-              <div class="item">Grazing</div>
-              <div class="item">Healthy Cows</div>
-              <div class="item">Polled</div>
-              <div class="item">Ultra Fertility</div>
-            </div>
-        </div>
-        
-        <div class="ui floating dropdown labeled search icon button">
-            <i class="world icon"></i>
-            <span class="text">Select Language</span>
-            <div class="menu">
-              <div class="item">Arabic</div>
-              <div class="item">Chinese</div>
-              <div class="item">Danish</div>
-              <div class="item">Dutch</div>
-              <div class="item">English</div>
-              <div class="item">French</div>
-              <div class="item">German</div>
-              <div class="item">Greek</div>
-              <div class="item">Hungarian</div>
-              <div class="item">Italian</div>
-              <div class="item">Japanese</div>
-              <div class="item">Korean</div>
-              <div class="item">Lithuanian</div>
-              <div class="item">Persian</div>
-              <div class="item">Polish</div>
-              <div class="item">Portuguese</div>
-              <div class="item">Russian</div>
-              <div class="item">Spanish</div>
-              <div class="item">Swedish</div>
-              <div class="item">Turkish</div>
-              <div class="item">Vietnamese</div>
-            </div>
-          </div>
-
-    
-
-        <div class="ui teal buttons">
-        <div class="ui button">More</div>
-        <div class="ui floating dropdown icon button">
-            <i class="dropdown icon"></i>
-            <div class="menu">
-            <div class="item"><i class="list ul icon"></i> High Ranking</div>
-            <div class="item"><i class="list ul icon"></i> Top 100 Proven</div>
-            <div class="item"><i class="list ul icon"></i> Top 200 Genomic</div>
-            </div>
-        </div>
-        </div>
-
-        <div class="ui divider"></div>
-
-        <div class="ui top attached tabular menu">
-            <a class="item active" data-tab="first">Basic</a>
-            <a class="item" data-tab="second">Prod</a>
-            <a class="item" data-tab="third">Health/Repro</a>
-            <a class="item" data-tab="forth">Linear</a>
-            <a class="item" data-tab="fifth">Pad</a>
-            <a class="item" data-tab="sixth">Extra</a>
-          </div>
-          <div class="ui bottom attached tab segment active" data-tab="first">
-            First
-          </div>
-          <div class="ui bottom attached tab segment" data-tab="second">
-            Second
-          </div>
-          <div class="ui bottom attached tab segment " data-tab="third">
-            Third
-          </div>
-          <div class="ui bottom attached tab segment " data-tab="forth">
-            Forth
-          </div>
-          <div class="ui bottom attached tab segment " data-tab="fifth">
-            Fifth
-          </div>
-          <div class="ui bottom attached tab segment " data-tab="sixth">
-            Sixth
-          </div>
--->
-        <div class="ui divider"></div>
-
-        <table id="myTable" class="ui celled table display" style="width:100%;">
-            <thead>
-                <tr>
-                    
-                    <th>Code           </th>
-                    <th>Name               </th>
-                    <th>Recessives	       </th>
-                    <th>Haplo Types	       </th>
-                    <th>Beta Casein	       </th>
-                    <th>Kappa Casein	   </th>
-                    <th>Obs	               </th>
-                    <th>Eval Date	       </th>
-                    <th>Eco	           </th>
-                    <th>JPI	</th>
-                    <th>Net Merit	   </th>
-                    <th>CM	               </th>
-                    <th>PTA Milk	       </th>
-                    <th>PTA Fat	           </th>
-                    <th>Fat	           </th>
-                    <th>PTA Pro	           </th>
-                    <th>Pro	           </th>
-                    <th>CFP	               </th>
-                    <th>SCS	               </th>
-                    <th>PL	               </th>
-                    <th>PTA DPR	           </th>
-                    <th>PTA LIV	           </th>
-                    <th>Mastitis	       </th>
-                    <th>CCR	               </th>
-                    <th>PTA Type	       </th>
-                    <th>JUI	               </th>
-                    <th>Sire x MGS x MGGS  </th>
-                    <th>a Aa	           </th>
-                    <th>DMS	               </th>
-                    <th>Last Proof	       </th>
-                    <th>Week	           </th>
-                    <th>Pedigree           </th>
-<!--
-                    <th>id</th>
-                    <th>first_name</th>
-                    <th>last_name</th>
-                    <th data-orderable="false">email</th>
-                    <th data-orderable="false">gender</th>
-                    <th>date</th>
-                    <th data-orderable="false">ip_address</th>
-                    <th>money</th>
-                -->
-                </tr>
-            </thead>
-            <tfoot>
-                <tr>
-                    <!--
-                    <th colspan="2" style="text-align:right;white-space:nowrap;">TOTAL : </th>
-                    <th colspan="6" style="text-align:left;white-space:nowrap;"></th>
-                    -->
-                </tr>
-            </tfoot>
-        </table>
+    <button class="ui blue button">
+      Holstein
+    </button>
+    <div class="ui blue button" tabindex="0">
+      Jersy
     </div>
-</body>
+    
+    <div class="ui divider"></div>
+    
+    <div class="ui large buttons">
+      <button class="ui button">Active Marketing</button>
+      <div class="or"></div>
+      <button class="ui button">Value Bulls</button>
+      <div class="or"></div>
+      <button class="ui button">Sell Out</button>
+    </div>
 
-</html>
+    <div class="ui divider"></div>
+
+
+    <div class="ui floating dropdown labeled icon button">
+      <i class="list icon"></i>
+      <span class="text">EcoFeed</span>
+      <div class="menu">
+        <div class="item">Plus</div>
+        <div class="item">helfer</div>
+        <div class="item">cow</div>
+      </div>
+  </div>
+
+  <div class="ui floating dropdown labeled icon button">
+      <i class="list icon"></i>
+      <span class="text">Designated Sires</span>
+      <div class="menu">
+        <div class="item">Kappa BB</div>
+        <div class="item">Grazing</div>
+        <div class="item">Healthy Cows</div>
+        <div class="item">Polled</div>
+        <div class="item">Ultra Fertility</div>
+      </div>
+  </div>
+  
+  <div class="ui floating dropdown labeled search icon button">
+      <i class="world icon"></i>
+      <span class="text">Select Language</span>
+      <div class="menu">
+        <div class="item">Arabic</div>
+        <div class="item">Chinese</div>
+        <div class="item">Danish</div>
+        <div class="item">Dutch</div>
+        <div class="item">English</div>
+        <div class="item">French</div>
+        <div class="item">German</div>
+        <div class="item">Greek</div>
+        <div class="item">Hungarian</div>
+        <div class="item">Italian</div>
+        <div class="item">Japanese</div>
+        <div class="item">Korean</div>
+        <div class="item">Lithuanian</div>
+        <div class="item">Persian</div>
+        <div class="item">Polish</div>
+        <div class="item">Portuguese</div>
+        <div class="item">Russian</div>
+        <div class="item">Spanish</div>
+        <div class="item">Swedish</div>
+        <div class="item">Turkish</div>
+        <div class="item">Vietnamese</div>
+      </div>
+    </div>
+
+
+
+  <div class="ui teal buttons">
+  <div class="ui button">More</div>
+  <div class="ui floating dropdown icon button">
+      <i class="dropdown icon"></i>
+      <div class="menu">
+      <div class="item"><i class="list ul icon"></i> High Ranking</div>
+      <div class="item"><i class="list ul icon"></i> Top 100 Proven</div>
+      <div class="item"><i class="list ul icon"></i> Top 200 Genomic</div>
+      </div>
+  </div>
+  </div>
+
+  <div class="ui divider"></div>
+
+  <div class="ui top attached tabular menu">
+      <a class="item active" data-tab="first">Basic</a>
+      <a class="item" data-tab="second">Prod</a>
+      <a class="item" data-tab="third">Health/Repro</a>
+      <a class="item" data-tab="forth">Linear</a>
+      <a class="item" data-tab="fifth">Pad</a>
+      <a class="item" data-tab="sixth">Extra</a>
+    </div>
+    <div class="ui bottom attached tab segment active" data-tab="first">
+      First
+    </div>
+    <div class="ui bottom attached tab segment" data-tab="second">
+      Second
+    </div>
+    <div class="ui bottom attached tab segment " data-tab="third">
+      Third
+    </div>
+    <div class="ui bottom attached tab segment " data-tab="forth">
+      Forth
+    </div>
+    <div class="ui bottom attached tab segment " data-tab="fifth">
+      Fifth
+    </div>
+    <div class="ui bottom attached tab segment " data-tab="sixth">
+      Sixth
+    </div>
+
+  <div class="ui divider"></div>
+
+    <table id="myTable" class="ui  table display" style="width:100%;">
+      
+      <thead>
+          <tr>
+              <th>Code</th>
+              <th data-orderable="false">Name</th>
+              <th data-orderable="false">Recessives</th>
+              <th>Haplo Types</th>
+              <th>Beta Casein</th>
+              <th>Kappa Casein</th>
+              <th>Obs</th>
+              <th>Eval Date</th>
+              <th>Eco</th>
+              <th>JPI</th>
+              <th>Net Merit</th>
+              <th>CM</th>
+              <th>PTA Milk</th>
+              <th>PTA Fat</th>
+              <th>Fat</th>
+              <th>PTA Pro</th>
+              <th>Pro</th>
+              <th>CFP</th>
+              <th>SCS</th>
+              <th>PL</th>
+              <th>PTA DPR</th>
+              <th>PTA LIV</th>
+              <th>Mastitis</th>
+              <th>CCR</th>
+              <th>PTA Type</th>
+              <th>JUI</th>
+              <th data-orderable="false">SirexMGSxMGGS</th>
+              <th>a Aa</th>
+              <th>DMS</th>
+              <th data-orderable="false">Last Proof</th>
+              <th data-orderable="false">Week</th>
+              <th data-orderable="false">Pedigree</th>
+
+          </tr>
+      </thead>
+      
+      </tfoot> 
+  </table>
+
+  </div>
+
+  </body>
+
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+      var dataSet= [
+        ["551JE02050","Ozona",,"JH1F","A2A2","BB","High Purity","202412",,171,"710","722","1248","74","0.06","58","0.06","132","2.98","4.3","-0.7","1.8",-1.4,"0","1.3","10.5","Ender x Jx Thrasher {6} x Amplify {3}",,,,,],
+        ["551JE02077","Milford",,"JH1F","A2A2","BB","High Purity","202412",,168,715,725,940,69,0.11,47,0.06,116,2.98,6,-0.4,1.6,-2.1,0.3,1.3,"15.9","Ender x Jx Thrasher {6} x Amplify {3}",,,,,],
+["551JE02049","Orland",,"JH1F","A2A2","BB","High Purity","202412",,166,652,657,1276,64,0.01,48,0,112,2.97,5.6,-0.6,1.4,-1.1,0,1.1,15.3,"Ender x Jx Thrasher {6} x Amplify {3}",,,,,],
+["551JE01938","Winn",,"JH1F","A2A2","BB","High Purity","202412",,161,677,684,753,54,0.08,32,0.02,86,2.88,7.3,-0.1,4,-0.1,1.1,1,14,"Stoney x Jiggy x Vandrell",,"234,345",,,],
+["551JE01997","Treggo",,"JH1F","A2A2","BB","High Purity","202412",,159,594,606,921,63,0.09,47,0.06,110,2.91,4.5,-0.6,0.4,-1.5,0.3,1,17.7,"Jx Monarch{5} x Loot x Jx Benelli {6}",,"123, 126",,,],
+["551JE01968","Judson-P","PC","JH1F","A2A2","BB","High Purity","202412",,157,608,618,897,84,0.2,43,0.05,127,2.9,3.2,-2.1,-1.5,-0.4,-1.1,0.9,17.6,"Vj Gutz x Jx Chief{6} x Listowel-P",,"126,561",,,],
+["551JE01952","Stone B","TP","JH1F","A2A2","AB","High Purity","202412",,150,762,772,869,77,0.17,42,0.05,119,2.9,5.6,-2.8,0.1,-0.7,-2.5,1.2,15.1,"Stoney x Jx Chief{6} x Listowel-P",,"561,126",,,],
+["551JE01990","Lallybroch",,"JH1F","A1A1","BB","High Purity","202412",,150,629,633,1482,53,-0.1,49,-0.03,102,2.9,5,-1.1,0.8,-1.5,0,0.9,13.2,"Midway x Altasaban {4} x Got Maid",,,,,],
+["551JE01951","Vero",,"JH1F","A2A2","AB","High Purity","202412",,147,660,674,577,66,0.19,39,0.09,105,2.91,5.5,-1.4,1.9,-1.6,-1.5,1.4,16.8,"Stoney x Jx Thrasher {6} x Got Maid",,561,,,],
+["551JE01955","World Classic",,"JH1F","A2A2","BB","High Purity","202412",,142,620,629,1436,79,0.04,61,0.04,140,3.02,3.1,-1.8,1.1,-4.9,-0.5,0.8,9.2,"Sugar Daddy x Jx Thrasher {6} x Zinc {5}",,"561,126",,,],
+["551JE01941","Sinclar",,"JH1F","A2A2","BB","High Purity","202412",,140,591,608,963,68,0.1,46,0.05,114,2.65,3.9,-3.6,0.4,-1.6,-3.6,1.6,17.8,"Spiral x Westport {6} x Jx Fournette {3}",,,,,],
+["551JE01874","Garland",,"JH1F JNS JNS_PC","A2A2","BB","High Purity","202412",,140,551,555,966,62,0.07,38,0.01,100,3.06,4.1,0.1,-0.1,-2.6,0.5,1.4,20.1,"Gallantry x Asensio x Chrome",243,"246,234",,,],
+["551JE01939","Iver",,"JH1F","A2A2","AB","High Purity","202412",,139,674,682,497,69,0.22,27,0.04,96,2.94,6.3,-1.9,1.2,0.5,-1.2,1,13.6,"Stoney x Jiggy x Listowel-P",,,,,],
+["551JE01950","Henley",,"JH1F","A2A2","AB","High Purity","202412",,139,625,634,437,67,0.23,29,0.06,96,3.02,5.7,-2.4,1.7,0.7,-1.7,1.4,20.5,"Stoney x Jiggy x Listowel-P",,"345,456",,,],
+["551JE01893","Ender",,"JH1F","A2A2","BB","High Purity","202412",,134,606,616,1003,63,0.07,48,0.05,111,2.97,3.9,-1.8,-0.1,-1.2,-0.5,0.5,9.2,"Sugar Daddy x Listowel-P x Hulk",,,,,],
+["551JE01992","Smaug",,"JH1F","A1A2","BB","High Purity","202412",,134,528,538,557,52,0.12,28,0.04,80,2.82,4.4,-0.4,0.2,-0.5,0.5,1.4,16.2,"Jx Theboss{6} x Chrome x Pharoah",,,,,],
+["551JE01984","Stockport",,"JH1F","A2A2","BB","High Purity","202412",,133,733,739,1149,68,0.06,45,0.01,113,2.97,5.5,-2.4,-0.1,-2.7,-2.3,1.1,13.7,"Quentin x Jx Chief{6} x Completely",,,,,],
+["551JE01959","Fonzell",,"JH1F","A2A2","BB","High Purity","202412",,133,638,654,671,54,0.1,40,0.08,94,2.76,4.8,-0.5,-0.2,-1.6,-0.1,0.1,5.1,"Venetie x Zo x Got Maid",,"246,456",,,],
+["551JE01812","Kellen","JNSF","JH1F","A2A2","BB","High Purity","202412",,133,611,616,1458,46,-0.12,48,-0.03,94,2.85,5.4,-2.4,1.2,-1.3,-0.6,0.9,10.7,"Jiggy x Jx Fournette {3} x Listowel-P",243,"126,561",,,],
+["551JE01934","Kaden",,"JH1F","A2A2","AB","High Purity","202412",,131,583,601,292,52,0.19,36,0.13,88,2.87,5,-0.4,2.1,-1.4,0.8,0.6,7.3,"Sugar Daddy x Stoney x Steve",,"126,123",,,],
+["551JE01886","Finely-PP",,"JH1F","A2A2","BB","High Purity","202412",,126,477,491,519,10,-0.08,26,0.03,36,2.61,5.5,1.1,0.8,-1.1,1.8,0.6,18.6,"Obsidian-P x Obsidian-P x Dan N400,243","123,135",,,],
+["551JE01887","Casselton",,"JH1F","A2A2","BB","High Purity","202412",,123,548,558,670,47,0.07,32,0.04,79,2.85,3.3,0.4,-0.6,-1.9,2,0,9.9,"Vj Gislev x Cheddar x Dan N400,435","234,246",,,],
+["551JE01885","Roller",,"JH1F","A2A2","BB","High Purity","202412",,123,532,544,344,35,0.09,22,0.05,57,2.73,3.9,1.3,0.5,-1.1,3.2,-0.4,9.1,"Vj Gislev x Dan N400 x Dj Holmer,432","234,345",,,],
+["551JE01798","Sugar Daddy","JNSF","JH1F","A2A2","BB","High Purity","202412",,120,553,567,1069,77,0.12,57,0.09,134,2.99,2.4,-3.3,0.6,-4.1,-1.9,0.9,8,"Jiggy x Chrome x Dimension,342","456,345",,,],
+["551JE01650","Got Maid","TL TD","JH1F JH2F","A1A2","BB","High Purity","202412",,118,531,541,1425,59,-0.05,56,0.02,115,2.85,3.1,-3.7,-2.1,-1.5,-2.6,0.3,5.9,"Harris x Dazzler x Valentino,432","345,135",,,],
+["551JE01863","Vyton",,"JH1F","A2A2","BB","High Purity","202412",,117,548,557,598,55,0.13,32,0.05,87,2.92,4.8,-2,2.7,-0.2,-0.5,0.7,8.3,"Jiggy x Stoney x World Cup,432","126,246",,,],
+["551JE01969","Ironton",,"JH1F","A1A2","BB","High Purity","202412",,115,642,644,1491,77,0.02,55,0,132,3.13,3.2,-2.5,-0.2,-4,-2.7,0.7,8.7,"Gallantry x Tux x Got Maid",,"246,456",,,],
+["551JE01862","Viktor",,"JH1F","A2A2","BB","High Purity","202412",,115,498,506,783,58,0.1,37,0.04,95,2.95,3.8,-3.7,1.6,-1.3,-1.9,1.1,17.6,"Jiggy x Got Maid x Vinka,261","345,234",,,],
+["551JE01766","Paddock","TL TV TD","JH1F JH2F","A2A2","BB","High Purity","202412",,115,399,407,1057,30,-0.11,45,0.03,75,2.96,3.1,0,1.2,-1.5,0.5,0.4,12.5,"Got Maid x Avon x Visitor",,"456,345",,,],
+["551JE01946","Athens",,"JH1C JH1_PC","A2A2","BB","High Purity","202412",,113,601,606,981,62,0.07,41,0.02,103,3.06,3.7,-1.4,0.1,-3.6,-1.2,0.7,13.9,"Gallantry x Got Maid x Magnum",,,,,],
+["551JE01894","Geron",,"JH1F","A1A2","BB","High Purity","202412",,113,579,583,1178,65,0.03,47,0.02,112,3.1,2.9,-2.3,-0.2,-3.3,-1.6,0.7,13.9,"Gallantry x Jiggy x Calvin",,"234, 345",,,],
+["551JE01895","Wolcott",,"JH1F","A1A2","BB","High Purity","202412",,113,579,583,1178,65,0.03,47,0.02,112,3.1,2.9,-2.3,-0.2,-3.3,-1.6,0.7,13.9,"Gallantry x Jiggy x Calvin",,"345, 456",,,],
+["551JE01877","Doha",,"JH1F","A2A2","BB","High Purity","202412",,112,519,527,1125,70,0.07,52,0.05,122,3.12,2.3,-3,-1.3,-3.5,-2.8,1.1,17,"Gallantry x Got Maid x Marlo",,"561,456",,,],
+["551JE01814","Telese","JNSF","JH1F","A2A2","AB","High Purity","202412",,108,554,563,809,59,0.1,38,0.04,97,2.89,4.2,-2.8,0.7,-1.9,-1.8,0.3,7.8,"Jiggy x Got Maid x Magnum,342","345,234",,,],
+["551JE01828","Venetie","JNSF","JH1F","A2A2","AB","High Purity","202412",,106,496,513,175,34,0.13,20,0.07,54,2.62,4.2,-0.1,0.1,-1.3,0.8,0.4,10.6,"Vj Heavy x Vj Hjort x Dan N400",465,561,,,],
+["551JE01932","Welland P",,"JH1F JNS JNS_PC","A2A2","BB","High Purity","202412",,105,445,448,1295,39,-0.12,38,-0.05,77,2.85,3.4,-2.2,0.8,-0.7,-0.5,1.2,10.7,"Listowel-P x Jiggy x Craze",,,,,],
+["551JE01876","Big Jolt",,"JH1F","A2A2","BB","High Purity","202412",,104,543,548,909,65,0.1,46,0.06,111,3.22,2.3,-1.6,-1,-3.8,-1,0.9,13.6,"Gallantry x Got Maid x Magnum",234,"123,126",,,],
+["551JE01985","Del Rio",,"JH1F","A2A2","AB","High Purity","202412",,103,545,543,1674,62,-0.1,62,0,124,3.39,2.1,-1.3,-1.2,-4.7,-1.2,0.7,8.8,"Gallantry x Jx Thrasher {6} x Got Maid",,,,,],
+["551JE01926","Volponi",,"JH1F","A2A2","BB","High Purity","202412",,102,374,392,389,37,0.09,36,0.11,73,2.77,1.2,-0.6,-1.5,-1.5,0.9,1,13.5,"Orbicularis x Charmer x Vj Hilario",,,,,],
+["551JE01861","Ambition",,"JH1F","A2A2","BB","High Purity","202412",,100,516,520,449,28,0.03,25,0.04,53,3.09,4.7,-0.5,1.7,-1.6,0.6,1.8,21.4,"Amore {6} x Craze x Impish,243","234,123",,,],
+["551JE01851","Vigkus",,"JNSF",,"JH1F","A2A2","BB","High Purity","202412",,100,477,489,912,56,0.05,48,0.07,104,2.99,2.3,-2.8,0,-2.5,-2.1,0.8,9.4,"Got Maid x World Cup x Chisel,423","345,234",,,],
+["551JE01808","River","JNSF","JH1F","A2A2","BB","High Purity","202412",,100,449,461,594,42,0.06,38,0.08,80,2.94,3.8,-2.3,1,-1.3,-0.5,0.2,7.7,"Jiggy x Viceroy x Vandrell,423","234,246",,,],
+["551JE01802","Knox","JNSF","JH1F","A2A2","BB","High Purity","202412",,98,391,393,1165,64,0.03,45,0.01,109,3.15,1,-3.6,1.6,-0.9,-2.4,1.4,13.8,"Jiggy x Achiever {3} x Marlo,312","561,126",,,],
+["551JE01796","Suavecito","JNSF","JH1F","A2A2","BB","High Purity","202412",,95,395,408,435,51,0.15,33,0.09,84,2.9,3.4,-2.7,1.2,-2.3,-0.6,0.9,7.7,"Jiggy x Chrome x Dimension,342",,,,],
+["551JE01929","Drosselmeyer P",,"JH1F","A2A2","BB","High Purity","202412",,94,502,521,-70,41,0.23,27,0.15,68,2.86,4.2,-1.1,1.8,-1.4,-0.6,0.2,8.5,"Federer-P x Viceroy x Dimension",351,,,,],
+["551JE01845","Quentin","JNSF","JH1F","A2A2","BB","High Purity","202412",,93,561,560,1185,63,0.02,41,-0.01,104,3.18,3.4,-2.1,-0.1,-5.1,-1.4,0.9,12.7,"Gallantry x Jiggy x Listowel-P",315,"234,246",,,],
+["551JE01875","Gronk",,"JH1F JNS JNS_PC","A2A2","AB","High Purity","202412",,93,501,498,1307,56,-0.04,39,-0.05,95,3.11,2.8,-2,-2.1,-2.7,-2.2,1.6,15.3,"Gallantry x Asensio x Chrome",516,,,,],
+["551JE01937","Mandalorian",,"JH1F","A2A2","BB","High Purity","202412",,91,522,528,1104,90,0.17,55,0.07,145,3.28,-0.1,-3.6,-1.9,-4.6,-3.1,1.3,8.7,"Navidad {6} x Amplify {3} x Mackenzie",,,,,],
+["551JE01949","Viscount",,"JH1F","A2A2","BB","High Purity","202412",,90,489,491,1213,58,-0.01,48,0.02,106,3.18,2.8,-1.8,-0.6,-4.7,-0.7,0.6,6.3,"Gallantry x Jiggy x World Cup",,,,,],
+["551JE01896","Quimpy",,"JH1F","A2A2","BB","High Purity","202412",,90,402,414,531,18,-0.04,28,0.04,46,2.76,4.5,-1.7,0.3,-2,-1,1.3,16.8,"Jalapeno x Chrome x Viceroy",,,,,],
+["551JE01824","Go On","JNSF","JH1F","A2A2","BB","High Purity","202412",,89,458,459,546,31,0.02,10,-0.05,41,2.76,5.6,-2.4,1.9,-0.9,-1.9,2.1,24.2,"Berrara x Got Maid x Marlo,432","135,345",,,],
+["551JE01848","Mexy","JNSF","JH1F","A2A2","BB","High Purity","202412",,89,324,331,456,34,0.06,17,0,51,2.76,3.3,-1.3,-0.9,0.5,-0.9,0.4,12.9,"Rhuss x Got Maid x Comanche",234,"561,135",,,],
+["551JE01717","Jiggy","TL TD TV","JH1F JH2F","A2A2","BB","High Purity","202412",,88,494,503,1007,60,0.05,44,0.03,104,2.96,3.7,-5.1,0.8,-2.1,-2.7,0.6,5.7,"Got Maid x Dazzler x Jace,426","561,135",,,],
+["551JE01879","Numan",,"JH1F","A2A2","BB","High Purity","202412",,87,461,463,1124,47,-0.04,43,0.01,90,3.11,2.7,-3.1,-0.4,-2.2,-2.6,0.5,14.2,"Gallantry x Got Maid x Vinka",,"234,345",,,],
+["551JE01880","Ojus","JNSC","JH1F JNS JNS_PC","A2A2","BB","High Purity","202412",,86,472,476,784,32,-0.03,32,0.01,64,2.99,4.3,-2.4,1.6,-0.6,-1.2,0.9,11.4,"Jiggy x Chrome x Rebel",,,,,],
+["551JE01765","Huxford","TL TD TV","JH1F","A2A2","BB","High Purity","202412",,86,247,249,905,33,-0.06,31,-0.01,64,3,1.5,-0.8,0.1,-2.5,0.2,1.2,18.7,"Viceroy x Bancroft x Pharoah",423,561,,,],
+["551JE01771","Efron-P","JNSF","JH1F JHP_PC","A2A2","BB","High Purity","202412",,85,403,407,223,30,0.1,7,-0.01,37,2.82,4.9,-1.9,2.3,0.7,-1.6,1.8,22.6,"Berrara x Shootout-P x Determinate,435","234,246",,,],
+["551JE01884","Pittsfield-P",,"JH1F","A2A2","BB","High Purity","202412",,85,329,340,252,55,0.22,26,0.08,81,2.95,1.4,-2.5,-0.1,1.5,-2.2,0.4,11.7,"Steve x Listowel-P x Daybreak",342,"135,345",,,],
+["551JE01883","Drake",,"JH1F","A2A2","AB","High Purity","202412",,82,484,481,1190,53,-0.03,40,-0.02,93,3.24,2.4,-1,-0.4,-5,0.4,0.8,9.3,"Gallantry x Jiggy x Bancroft,342","126,561",,,],
+["551JE01873","Laspada",,"JH1F","A2A2","BB","High Purity","202412",,81,248,256,-328,26,0.22,0,0.06,26,2.89,3,0.4,0.6,0.9,1.5,1.6,19.2,"Chrome x Citation x Karbala,432","561,126",,,],
+["551JE01878","Napa",,"JH1F","A2A2","AB","High Purity","202412",,75,406,402,1477,60,-0.06,48,-0.03,108,3.27,0.8,-2.2,-1,-4.7,-2,0.8,12.4,"Gallantry x Got Maid x Ti",423,"561,456",,,],
+["551JE01820","Zodi","JNSF","JH1F","A2A2","BB","High Purity","202412",,75,336,344,19,26,0.13,10,0.05,36,2.86,3.8,-1.5,0.9,-0.6,-1.1,2.2,20.2,"Chrome x Bancroft x Pharoah",543,,,,],
+["551JE01838","Jigsaw","JNSF","JH1F","A1A2","BB","High Purity","202412",,72,492,491,656,41,0.04,22,-0.01,63,3.07,4.9,-2.5,1.3,-3.4,-1,1.2,14.5,"Jiggy x Craze x Mackenzie",543,"456,345",,,],
+["551JE01797","Mr Smith","JNSF","JH1F","A2A2","BB","High Purity","202412",,71,276,298,-84,53,0.3,36,0.2,89,3,1.1,-2.9,0.6,-2.2,-1.5,0.5,6.6,"Jiggy x Chrome x Dimension",432,"456,345",,,],
+["551JE01829","Jalapeno",,"JH1F","A2A2","BB","High Purity","202412",,52,331,343,459,18,-0.02,30,0.07,48,2.89,3.6,-3.3,0.8,-2.8,-2.2,0.7,8.8,"Jiggy x Listowel-P x Monument",243,"345,135",,,],
+["551JE01762","Gallantry","JNSF","JH1F","A2A2","AB","High Purity","202412",,41,412,402,1848,77,-0.07,60,-0.04,137,3.59,-1.5,-4.2,-3.7,-8.3,-3.8,1,12.1,"Completely x Avon x Mackenzie",432,"123,135",,,],
+["551JE02018","Billy Mack",,"JH1F","A2A2","BB","High Purity","202412",,35,165,171,-218,18,0.15,5,0.07,23,3,1.1,-1.8,-2.8,-0.3,-1.8,2.2,22.2,"Bowlers x Victorious x",,,,,],
+["522JE01891","Addiction",,"JH1F","A2A2","BB","High Purity","202412",,28,39,43,-635,4,0.19,-10,0.07,-6,3.06,1.8,0.6,1.2,0.3,0.8,1.7,19.3,"Casino x Branson x",561,,,,],
+["551JE02061","HICKEY",,"JH1C JH1_PC","A2A2","BB",,"202412",,23,52,56,16,22,0.11,14,0.07,36,3.13,-1,-2.3,-2.1,-0.1,-2.4,1.3,20.9,"Thor x  x Chrome",,,,,],
+["551JE01954","Cranks",,"JH1F","A2A2","BB","High Purity","202412",,-17,-207,-200,-1531,-28,0.26,-34,0.13,-62,3,1.3,2.3,3,2.5,1.6,1.1,17.5,"Nuance x Premier x Action",,,,,],
+["522JE01940","Map",,"JH1F","A2A2","BB","High Purity",202412,,-19,-108,-101,-1070,7,0.33,-21,0.1,-14,2.97,0.6,-2,-2.9,-0.1,-2.6,1.9,20,"Chrome x Tequila x Celebrity",246,,,,],
+["551JE01825","Ferdinand",,"JH1F","A2A2","AB","High Purity",202412,,-39,-191,-194,-728,-10,0.14,-18,0.05,-28,3.23,-1.3,0.1,-1.9,1.1,-0.5,1.4,18.2,"Viral x Celebrity x Senior",,,,,],
+["551JE01935","Aldean",,"JH1C JH1_PC","A1A2","BB","High Purity",202412,,-87,-407,-400,-1864,-29,0.36,-42,0.15,-71,3.06,-1.2,-0.6,-1,-0.2,-1.3,0.9,19.8,"Joyride x Tequila x Premier",,,,,],
+["551JE01936","Recognition",,"JH1F","A2A2","AB","High Purity",202412,,-99,-490,-494,-1964,-47,0.28,-57,0.09,-104,3.25,-0.3,1.3,0.3,-0.4,2.5,1.7,19.1,"V I P x Viral x Excitation",,,,,],
+["551JE01840","Canadian Club","JNSF","JH1F","A1A2","BB","High Purity",202412,,-107,-508,-508,-1744,-78,0.04,-48,0.09,-126,3.14,0.3,1.3,2.4,0.1,1.4,1.7,20.3,"V I P x Premier x Action",156,"561,126",,,],
+["551JE01775","Frank",,"JH1F","A1A2","AB","High Purity",202412,,-111,-478,-478,-1728,-53,0.18,-49,0.08,-102,3.07,0.2,-2.3,-1.4,2,-1.8,1.4,18.2,"Victorious x Excitation x Verbatim Response",513,"345,456",,,],
+["076JE00156","Tequila","TL TD","JH1F JH2F","A1A2","BB",,202412,,-200,-802,-807,-2062,-53,0.28,-55,0.12,-108,3.41,-3,-3.9,-5.2,-2.4,-4.9,1.4,18.2,"Primetime x Sambo x Regal",234165,"234,123",,,]
+      ];
+
+      var table = null;
+
+      var table = $('#myTable').DataTable({
+        bAutoWidth: false,
+         // lengthMenu: [ 10 ],
+        //lengthMenu: [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
+  
+          //stateSave: true,
+          pagingType: "full_numbers",
+          scrollX: true,
+          scrollY:        '50vh',
+          scrollCollapse: true,
+          processing: false,
+          serverSide: false,
+          /*
+          ajax: {
+              'url':'/function',
+              'type': 'POST',
+              'async' :'false',
+          },
+          */
+
+          //ajax:'D:\webproject\Hostein\test.txt',
+          
+
+          columns: [
+            {title:"Code"},
+            {title:"Name"},
+            {title:"Recessives"},
+            {title:"HaploType"},
+            {title:"BetaCasein"},
+            {title:"Kappa Casein"},
+            {title:"Obs"},
+            {title:"EvalDate"},
+            {title:"Eco"},
+            {title:"JPI"},
+            {title:"NetMerit"},
+            {title:"CM"},
+            {title:"PTAMilk"},
+            {title:"PTAFat"},
+            {title:"Fat"},
+            {title:"PTAPro"},
+            {title:"Pro"},
+            {title:"CFP"},
+            {title:"SCS"},
+            {title:"PL"},
+            {title:"PTADPR"},
+            {title:"PTALIV"},
+            {title:"Mastitis"},
+            {title:"CCR"},
+            {title:"PTAType"},
+            {title:"JUI"},
+            {title:"SireMGSMGGS"},
+            {title:"aAa"},
+            {title:"DMS"},
+            {title:"LastProof"},
+            {title:"Week"},
+            {title:"Pedigree"}
+                
+          ], 
+          columnDefs: [{
+                        "defaultContent": "",
+                        "targets": "_all"
+                      }],
+
+
+          data: dataSet
+    
+        
+        
+     });
+
+
+    });
+
+  </script>
+
+ </html>
