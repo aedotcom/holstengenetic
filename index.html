@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DataTables Examples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="vendor/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css/responsive.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="Semantic/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <script src='vendor/js/jquery-3.3.1.min.js'></script>
+    <script src="vendor/js/jquery.dataTables.js"></script>
+    <script src="vendor/js/dataTables.responsive.min.js"></script>
+    <script src="vendor/js/dataTables.buttons.min.js"></script>
+	<script src="vendor/js/buttons.html5.min.js"></script>
+    <script src="Semantic/semantic.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>List</h1>
+
+        <div class="blue large ui buttons">
+            <button class="ui   button">Holstein</button>
+            <button class="ui   button active">Jersy</button>
+        </div>
+
+        <div class="ui divider"></div>
+
+        <div class="ui large buttons">
+            <button class="ui button">Active Marketing</button>
+            <div class="or"></div>
+            <button class="ui button">Value Bulls</button>
+            <div class="or"></div>
+            <button class="ui button">Sell Out</button>
+        </div>
+
+        <div class="ui divider"></div>
+
+        <button class="ui facebook button">
+            <i class="facebook icon"></i>
+            Facebook
+        </button>
+        <button class="ui twitter button">
+            <i class="twitter icon"></i>
+            Twitter
+        </button>
+
+        <div class="ui floating dropdown labeled icon button">
+            <i class="list icon"></i>
+            <span class="text">EcoFeed</span>
+            <div class="menu">
+              <div class="item">Plus</div>
+              <div class="item">helfer</div>
+              <div class="item">cow</div>
+            </div>
+        </div>
+
+        <div class="ui floating dropdown labeled icon button">
+            <i class="list icon"></i>
+            <span class="text">Designated Sires</span>
+            <div class="menu">
+              <div class="item">Kappa BB</div>
+              <div class="item">Grazing</div>
+              <div class="item">Healthy Cows</div>
+              <div class="item">Polled</div>
+              <div class="item">Ultra Fertility</div>
+            </div>
+        </div>
+        
+        <div class="ui floating dropdown labeled search icon button">
+            <i class="world icon"></i>
+            <span class="text">Select Language</span>
+            <div class="menu">
+              <div class="item">Arabic</div>
+              <div class="item">Chinese</div>
+              <div class="item">Danish</div>
+              <div class="item">Dutch</div>
+              <div class="item">English</div>
+              <div class="item">French</div>
+              <div class="item">German</div>
+              <div class="item">Greek</div>
+              <div class="item">Hungarian</div>
+              <div class="item">Italian</div>
+              <div class="item">Japanese</div>
+              <div class="item">Korean</div>
+              <div class="item">Lithuanian</div>
+              <div class="item">Persian</div>
+              <div class="item">Polish</div>
+              <div class="item">Portuguese</div>
+              <div class="item">Russian</div>
+              <div class="item">Spanish</div>
+              <div class="item">Swedish</div>
+              <div class="item">Turkish</div>
+              <div class="item">Vietnamese</div>
+            </div>
+          </div>
+
+    
+
+        <div class="ui teal buttons">
+        <div class="ui button">More</div>
+        <div class="ui floating dropdown icon button">
+            <i class="dropdown icon"></i>
+            <div class="menu">
+            <div class="item"><i class="list ul icon"></i> High Ranking</div>
+            <div class="item"><i class="list ul icon"></i> Top 100 Proven</div>
+            <div class="item"><i class="list ul icon"></i> Top 200 Genomic</div>
+            </div>
+        </div>
+        </div>
+
+        <div class="ui divider"></div>
+
+        <div class="ui top attached tabular menu">
+            <a class="item active" data-tab="first">Basic</a>
+            <a class="item" data-tab="second">Prod</a>
+            <a class="item" data-tab="third">Health/Repro</a>
+            <a class="item" data-tab="forth">Linear</a>
+            <a class="item" data-tab="fifth">Pad</a>
+            <a class="item" data-tab="sixth">Extra</a>
+          </div>
+          <div class="ui bottom attached tab segment active" data-tab="first">
+            First
+          </div>
+          <div class="ui bottom attached tab segment" data-tab="second">
+            Second
+          </div>
+          <div class="ui bottom attached tab segment " data-tab="third">
+            Third
+          </div>
+          <div class="ui bottom attached tab segment " data-tab="forth">
+            Forth
+          </div>
+          <div class="ui bottom attached tab segment " data-tab="fifth">
+            Fifth
+          </div>
+          <div class="ui bottom attached tab segment " data-tab="sixth">
+            Sixth
+          </div>
+
+        <div class="ui divider"></div>
+
+        <table id="myTable" class="ui celled table display" style="width:100%;">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Code           </th>
+                    <th>Name               </th>
+                    <th>Recessives	       </th>
+                    <th>Haplo Types	       </th>
+                    <th>Beta Casein	       </th>
+                    <th>Kappa Casein	   </th>
+                    <th>Obs	               </th>
+                    <th>Eval Date	       </th>
+                    <th>Eco	           </th>
+                    <th>JPI	Net Merit	   </th>
+                    <th>CM	               </th>
+                    <th>PTA Milk	       </th>
+                    <th>PTA Fat	           </th>
+                    <th>Fat	           </th>
+                    <th>PTA Pro	           </th>
+                    <th>Pro	           </th>
+                    <th>CFP	               </th>
+                    <th>SCS	               </th>
+                    <th>PL	               </th>
+                    <th>PTA DPR	           </th>
+                    <th>PTA LIV	           </th>
+                    <th>Mastitis	       </th>
+                    <th>CCR	               </th>
+                    <th>PTA Type	       </th>
+                    <th>JUI	               </th>
+                    <th>Sire x MGS x MGGS  </th>
+                    <th>a Aa	           </th>
+                    <th>DMS	               </th>
+                    <th>Last Proof	       </th>
+                    <th>Week	           </th>
+                    <th>Pedigree           </th>
+<!--
+                    <th>id</th>
+                    <th>first_name</th>
+                    <th>last_name</th>
+                    <th data-orderable="false">email</th>
+                    <th data-orderable="false">gender</th>
+                    <th>date</th>
+                    <th data-orderable="false">ip_address</th>
+                    <th>money</th>
+                -->
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <!--
+                    <th colspan="2" style="text-align:right;white-space:nowrap;">TOTAL : </th>
+                    <th colspan="6" style="text-align:left;white-space:nowrap;"></th>
+                    -->
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+
+</html>
