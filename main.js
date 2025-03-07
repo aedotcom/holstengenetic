@@ -17,7 +17,7 @@ $(document).ready(function () {
     )*/
 
     var table = $('#myTable').DataTable({
-        lengthMenu: [ 10 ],
+        //lengthMenu: [ 10 ],
         dom: '<"top"Bfl>rt<"bottom"ip><"clear">',
         pagingType: "full_numbers",
         scrollY:        '50vh',
