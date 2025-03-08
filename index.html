@@ -5,12 +5,26 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.semanticui.min.css">
-   <link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="main.css">
+ <!--  
+   -->
    <title>제3세대 자율형 젖소 K-스마트축사 통합관리</title>
   </head>
+
+  <script src = "https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src = "https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src = "https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
+<script src = "https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+<script src = "https://cdn.datatables.net/buttons/1.5.1/js/buttons.semanticui.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+<script src = "https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+<script src = "https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+<script src = "https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
  
   <!-- JS Library Dependencies 
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -18,7 +32,12 @@
   <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.25/js/dataTables.semanticui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
-  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.semanticui.min.css">
+
+
+  
 
   <script src = "https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src = "https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
@@ -34,7 +53,7 @@
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
 
-
+-->
  
   <body>
 
@@ -63,23 +82,25 @@
 
     <div class="ui floating dropdown labeled icon button">
       <i class="list icon"></i>
-      <span class="text">EcoFeed</span>
+      <span class="text">사료효율</span>
       <div class="menu">
-        <div class="item">Plus</div>
-        <div class="item">helfer</div>
-        <div class="item">cow</div>
+        <div class="item">사료효율@종합</div>
+        <div class="item">사료효율@육성우</div>
+        <div class="item">사료효율@경산우</div>
       </div>
   </div>
 
   <div class="ui floating dropdown labeled icon button">
       <i class="list icon"></i>
-      <span class="text">Designated Sires</span>
+      <span class="text">맞춤형 씨수소</span>
       <div class="menu">
-        <div class="item">Kappa BB</div>
-        <div class="item">Grazing</div>
-        <div class="item">Healthy Cows</div>
-        <div class="item">Polled</div>
-        <div class="item">Ultra Fertility</div>
+        <div class="item">A2A2</div>
+        <div class="item">방목형</div>
+        <div class="item">건강형질</div>
+        <div class="item">무각형</div>
+        <div class="item">로봇형</div>
+        <div class="item">Slick</div>
+        <div class="item">품평회형</div>
       </div>
   </div>
   
@@ -127,7 +148,7 @@
 
   <div class="ui divider"></div>
 
-  <!--
+<!---
 
   <div class="ui top attached tabular menu">
       <a class="item active" data-tab="first">Basic</a>
@@ -159,48 +180,53 @@
   <div class="ui divider"></div>
   -->
 
-    <table id="myTable" class="ui  table display nowrap" style="width:100%;">
+  <div class="ui grid">
+    <div id="buttons-menu" class="two  column"></div>
+    <div class="thirteen wide column">
+    <table id="myTable" class="ui celled table" cellspacing="0" style="width:100%;">
       
       <thead>
           <tr>
-              <th>Code</th>
-              <th data-orderable="false">Name</th>
-              <th data-orderable="false">Recessives</th>
-              <th>Haplo Types</th>
-              <th>Beta Casein</th>
-              <th>Kappa Casein</th>
-              <th>Obs</th>
-              <th>Eval Date</th>
-              <th>Eco</th>
-              <th>JPI</th>
-              <th>Net Merit</th>
-              <th>CM</th>
-              <th>PTA Milk</th>
-              <th>PTA Fat</th>
-              <th>Fat</th>
-              <th>PTA Pro</th>
-              <th>Pro</th>
-              <th>CFP</th>
-              <th>SCS</th>
+              <th>씨수소번호</th>
+              <th data-orderable="false">명호</th>
+              <th data-orderable="false">결점형질</th>
+              <th>하플로타입</th>
+              <th>베타카제인</th>
+              <th>카파카제인</th>
+              <th>Obs</th> <!--지움-->
+              <th>기준일</th>
+              <th>사료효율</th>
+              <th>JPI</th>  <!--지움-->
+              <th>이익지수</th> 
+              <th>치즈이익지수</th>
+              <th>유량</th>
+              <th>지방량</th>
+              <th>지방율</th>
+              <th>단백량</th>
+              <th>단백율</th>
+              <th>CFP</th>  <!--지움-->
+              <th>체세포지수</th>
               <th>PL</th>
               <th>PTA DPR</th>
               <th>PTA LIV</th>
-              <th>Mastitis</th>
+              <th>유방염지수</th>
               <th>CCR</th>
-              <th>PTA Type</th>
+              <th>체형</th>
               <th>JUI</th>
-              <th data-orderable="false">SirexMGSxMGGS</th>
-              <th>a Aa</th>
+              <th data-orderable="false">부X외조부X증외조부</th>
+              <th>aAa</th>
               <th>DMS</th>
-              <th data-orderable="false">Last Proof</th>
-              <th data-orderable="false">Week</th>
-              <th data-orderable="false">Pedigree</th>
+              <th data-orderable="false">Last Proof</th> <!--지움-->
+              <th data-orderable="false">Week</th> <!--지움-->
+              <th data-orderable="false">혈통</th>
 
           </tr>
       </thead>
       
       </tfoot> 
   </table>
+</div>
+</div>
 
   </div>
 
@@ -249,7 +275,7 @@ var dataSet= [
 ["551JE01985","Del Rio",,"JH1F","A2A2","AB","High Purity","202412",,103,545,543,1674,62,-0.1,62,0,124,3.39,2.1,-1.3,-1.2,-4.7,-1.2,0.7,8.8,"Gallantry x Jx Thrasher {6} x Got Maid",,,,,],
 ["551JE01926","Volponi",,"JH1F","A2A2","BB","High Purity","202412",,102,374,392,389,37,0.09,36,0.11,73,2.77,1.2,-0.6,-1.5,-1.5,0.9,1,13.5,"Orbicularis x Charmer x Vj Hilario",,,,,],
 ["551JE01861","Ambition",,"JH1F","A2A2","BB","High Purity","202412",,100,516,520,449,28,0.03,25,0.04,53,3.09,4.7,-0.5,1.7,-1.6,0.6,1.8,21.4,"Amore {6} x Craze x Impish,243","234,123",,,],
-["551JE01851","Vigkus",,"JNSF",,"JH1F","A2A2","BB","High Purity","202412",,100,477,489,912,56,0.05,48,0.07,104,2.99,2.3,-2.8,0,-2.5,-2.1,0.8,9.4,"Got Maid x World Cup x Chisel,423","345,234",,,],
+["551JE01851","Vigkus",,"JNSF JH1F","A2A2","BB","High Purity","202412",,100,477,489,912,56,0.05,48,0.07,104,2.99,2.3,-2.8,0,-2.5,-2.1,0.8,9.4,"Got Maid x World Cup x Chisel,423","345,234",,,],
 ["551JE01808","River","JNSF","JH1F","A2A2","BB","High Purity","202412",,100,449,461,594,42,0.06,38,0.08,80,2.94,3.8,-2.3,1,-1.3,-0.5,0.2,7.7,"Jiggy x Viceroy x Vandrell,423","234,246",,,],
 ["551JE01802","Knox","JNSF","JH1F","A2A2","BB","High Purity","202412",,98,391,393,1165,64,0.03,45,0.01,109,3.15,1,-3.6,1.6,-0.9,-2.4,1.4,13.8,"Jiggy x Achiever {3} x Marlo,312","561,126",,,],
 ["551JE01796","Suavecito","JNSF","JH1F","A2A2","BB","High Purity","202412",,95,395,408,435,51,0.15,33,0.09,84,2.9,3.4,-2.7,1.2,-2.3,-0.6,0.9,7.7,"Jiggy x Chrome x Dimension,342",,,,],
@@ -309,14 +335,18 @@ var dataSet= [
         }
     )
 
+    $("#myTable").DataTable().destroy(); //이전에 만든 것 없애고 다시 그리기 위함.
+
       var table = $('#myTable').DataTable({
         
+        
          // lengthMenu: [ 10 ],
-        //lengthMenu: [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
+        lengthMenu: [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
   
           stateSave: true,
           responsive: true,
           orderMulti: true,
+          paging: true,        //페이징 표시 설정
           pagingType: "full_numbers",
           scrollX: true,
           scrollY:        '50vh',
@@ -333,45 +363,51 @@ var dataSet= [
           
 
           columns: [
-            {title:"Code"},
-            {title:"Name"},
-            {title:"Recessives"},
-            {title:"HaploType"},
-            {title:"BetaCasein"},
-            {title:"Kappa Casein"},
-            {title:"Obs"},
-            {title:"EvalDate"},
-            {title:"Eco"},
-            {title:"JPI"},
-            {title:"NetMerit"},
-            {title:"CM"},
-            {title:"PTAMilk"},
-            {title:"PTAFat"},
-            {title:"Fat"},
-            {title:"PTAPro"},
-            {title:"Pro"},
-            {title:"CFP"},
-            {title:"SCS"},
-            {title:"PL"},
-            {title:"PTADPR"},
-            {title:"PTALIV"},
-            {title:"Mastitis"},
-            {title:"CCR"},
-            {title:"PTAType"},
-            {title:"JUI"},
-            {title:"SireMGSMGGS"},
-            {title:"aAa"},
-            {title:"DMS"},
-            {title:"LastProof"},
-            {title:"Week"},
-            {title:"Pedigree"}
+          {title:"씨수소번호"},
+          {title:"명호"},
+  {title:"결점형질"},
+
+  {title:"하플로타입"},
+  {title:"베타카제인"},
+  {title:"카파카제인"},
+  {title:"Obs"},
+  {title:"기준일"},
+  {title:"사료효율"},
+  {title:"JPI"},
+  {title:"이익지수"}, 
+  {title:"치즈이익지수"},
+  {title:"유량"},
+  {title:"지방량"},
+  {title:"지방율"},
+  {title:"단백량"},
+  {title:"단백율"},
+  {title:"CFP"},
+  {title:"체세포지수"},
+  {title:"PL"},
+  {title:"PTA DPR"},
+  {title:"PTA LIV"},
+  {title:"유방염지수"},
+  {title:"CCR"},
+  {title:"체형"},
+  {title:"JUI"},
+  {title:"부X외조부X증외조부"},
+  {title:"aAa"},
+  {title:"DMS"},
+  {title:"Last Proof"}, 
+  {title:"Week"}, 
+  {title:"혈통"}
                 
           ], 
           columnDefs: [{
                         "defaultContent": "",
                         "targets": "_all"
-                      }],
-           language: [{
+                      },
+                      {
+			"targets": [7, 10, 18, 30, 31],
+			"visible": false
+		},
+                    ],
+                      "language": {
             "emptyTable": "데이터가 없어요.",
             "lengthMenu": "페이지당 _MENU_ 개씩 보기",
             "info": "현재 _START_ - _END_ / _TOTAL_건",
@@ -385,10 +421,11 @@ var dataSet= [
                 "next": "다음",
                 "previous": "이전"
             }
-        }],
+        },
 
           dom : 'Blfrtip',
 
+      /*
           buttons:[{
                   extend:'csvHtml5',
                   text: 'Export CSV',
@@ -396,7 +433,9 @@ var dataSet= [
                   bom: true,
                   className: 'exportCSV'
                 }],
-
+*/
+    //lengthChange: false,
+    buttons: [ 'copy', 'excel', 'pdf', 'colvis' ],
 
           data: dataSet
     
@@ -418,11 +457,22 @@ var dataSet= [
     });
 
     /* 날짜검색 이벤트 리바인딩 */
+    /*
     $('#myTable_filter').prepend('<input type="text" id="toDate" placeholder="yyyy-MM-dd"> ');
     $('#myTable_filter').prepend('<input type="text" id="fromDate" placeholder="yyyy-MM-dd">~');
     $('#toDate, #fromDate').unbind().bind('keyup',function(){
         table.draw();
     })
+        */
+
+    table.buttons().container()
+    .appendTo( $('#buttons-menu') )
+    .addClass('ui buttons vertical')
+  
+  // demonstrate how to change styling of buttons
+  //   order of classes matter
+  $('.ui.button', table.buttons().container())
+    .addClass('basic primary')
 
 
     });
