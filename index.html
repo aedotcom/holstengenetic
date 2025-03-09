@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.semanticui.min.css">
 <link rel="stylesheet" type="text/css" href="main.css">
+
  <!--  
+
    -->
    <title>제3세대 자율형 젖소 K-스마트축사 통합관리</title>
   </head>
@@ -179,11 +181,12 @@
 
   <div class="ui divider"></div>
   -->
-
+<!--
   <div class="ui grid">
     <div id="buttons-menu" class="two  column"></div>
     <div class="thirteen wide column">
-    <table id="myTable" class="ui celled table" cellspacing="0" style="width:100%;">
+        -->
+    <table id="myTable" class="ui  table display nowrap" cellspacing="0" style="width:100%;">
       
       <thead>
           <tr>
@@ -225,8 +228,11 @@
       
       </tfoot> 
   </table>
+
+  <!--
 </div>
 </div>
+-->
 
   </div>
 
@@ -346,7 +352,7 @@ var dataSet= [
           stateSave: true,
           responsive: true,
           orderMulti: true,
-          paging: true,        //페이징 표시 설정
+           paging: true,        //페이징 표시 설정
           pagingType: "full_numbers",
           scrollX: true,
           scrollY:        '50vh',
@@ -403,9 +409,9 @@ var dataSet= [
                         "targets": "_all"
                       },
                       {
-			"targets": [7, 10, 18, 30, 31],
-			"visible": false
-		},
+                            "targets": [7, 10, 18, 30, 31],
+                            "visible": false
+                        },
                     ],
                       "language": {
             "emptyTable": "데이터가 없어요.",
