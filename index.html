@@ -5,28 +5,12 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.semanticui.min.css">
-<link rel="stylesheet" type="text/css" href="main.css">
-
- <!--  
-
-   -->
-   <title>제3세대 자율형 젖소 K-스마트축사 통합관리</title>
+   <link rel="stylesheet" type="text/css" href="main.css">
+   <title>젖소 선형심사 계획교배 프로그램</title>
   </head>
-
-  <script src = "https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src = "https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script src = "https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
-<script src = "https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
-<script src = "https://cdn.datatables.net/buttons/1.5.1/js/buttons.semanticui.min.js"></script>
-<script src = "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-<script src = "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
-<script src = "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
-<script src = "https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
-<script src = "https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
-<script src = "https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
-<script src = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
  
   <!-- JS Library Dependencies 
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -34,12 +18,7 @@
   <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.25/js/dataTables.semanticui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.semanticui.min.css">
-
-
-  
+  -->
 
   <script src = "https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src = "https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
@@ -55,14 +34,13 @@
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
 
--->
+
  
   <body>
 
   <div class ="CowList">
-  <h1>K-스마트축사 통합관리 리스트</h1>
+  <h1>젖소 선형심사 계획교배 프로그램</h1>
   
-  <div class="field"></div>
     <button class="ui blue button">
       Holstein
     </button>
@@ -70,9 +48,7 @@
       Jersey
     </div>
     
-  <br>
-  <br>
-    
+    <div class="ui divider"></div>
     
     <div class="ui large buttons">
       <button class="ui button">국내유통씨수소</button>
@@ -82,31 +58,28 @@
       <button class="ui button">Sell Out</button>
     </div>
 
-    <br>
-    <br>
+    <div class="ui divider"></div>
 
 
     <div class="ui floating dropdown labeled icon button">
       <i class="list icon"></i>
-      <span class="text">사료효율</span>
+      <span class="text">EcoFeed</span>
       <div class="menu">
-        <div class="item">사료효율@종합</div>
-        <div class="item">사료효율@육성우</div>
-        <div class="item">사료효율@경산우</div>
+        <div class="item">Plus</div>
+        <div class="item">helfer</div>
+        <div class="item">cow</div>
       </div>
   </div>
 
   <div class="ui floating dropdown labeled icon button">
       <i class="list icon"></i>
-      <span class="text">맞춤형 씨수소</span>
+      <span class="text">Designated Sires</span>
       <div class="menu">
-        <div class="item">A2A2</div>
-        <div class="item">방목형</div>
-        <div class="item">건강형질</div>
-        <div class="item">무각형</div>
-        <div class="item">로봇형</div>
-        <div class="item">Slick</div>
-        <div class="item">품평회형</div>
+        <div class="item">Kappa BB</div>
+        <div class="item">Grazing</div>
+        <div class="item">Healthy Cows</div>
+        <div class="item">Polled</div>
+        <div class="item">Ultra Fertility</div>
       </div>
   </div>
   
@@ -154,9 +127,7 @@
 
   <div class="ui divider"></div>
 
-  
-
-<!---
+  <!--
 
   <div class="ui top attached tabular menu">
       <a class="item active" data-tab="first">Basic</a>
@@ -187,47 +158,43 @@
 
   <div class="ui divider"></div>
   -->
-<!--
-  <div class="ui grid">
-    <div id="buttons-menu" class="two  column"></div>
-    <div class="thirteen wide column">
-        -->
-    <table id="myTable" class="ui  table display nowrap" cellspacing="0" style="width:100%;">
+
+    <table id="myTable" class="ui  table display nowrap" style="width:100%;">
       
       <thead>
           <tr>
-              <th>씨수소번호</th>
-              <th data-orderable="false">명호</th>
-              <th data-orderable="false">결점형질</th>
-              <th>하플로타입</th>
-              <th>베타카제인</th>
-              <th>카파카제인</th>
-              <th>Obs</th> <!--지움-->
-              <th>기준일</th>
-              <th>사료효율</th>
-              <th>JPI</th>  <!--지움-->
-              <th>이익지수</th> 
-              <th>치즈이익지수</th>
-              <th>유량</th>
-              <th>지방량</th>
-              <th>지방율</th>
-              <th>단백량</th>
-              <th>단백율</th>
-              <th>CFP</th>  <!--지움-->
-              <th>체세포지수</th>
-              <th>PL</th>
-              <th>PTA DPR</th>
-              <th>PTA LIV</th>
-              <th>유방염지수</th>
-              <th>CCR</th>
-              <th>체형</th>
-              <th>JUI</th>
-              <th data-orderable="false">부X외조부X증외조부</th>
-              <th>aAa</th>
-              <th>DMS</th>
-              <th data-orderable="false">Last Proof</th> <!--지움-->
-              <th data-orderable="false">Week</th> <!--지움-->
-              <th data-orderable="false">혈통</th>
+            <th>씨수소번호</th>
+            <th data-orderable="false">명호</th>
+            <th data-orderable="false">결점형질</th>
+            <th>하플로타입</th>
+            <th>베타카제인</th>
+            <th>카파카제인</th>
+            <th>Obs</th> <!--지움-->
+            <th>기준일</th>
+            <th>사료효율</th>
+            <th>JPI</th>  <!--지움-->
+            <th>이익지수</th> 
+            <th>치즈이익지수</th>
+            <th>유량</th>
+            <th>지방량</th>
+            <th>지방율</th>
+            <th>단백량</th>
+            <th>단백율</th>
+            <th>CFP</th>  <!--지움-->
+            <th>체세포지수</th>
+            <th>PL</th>
+            <th>PTA DPR</th>
+            <th>PTA LIV</th>
+            <th>유방염지수</th>
+            <th>CCR</th>
+            <th>체형</th>
+            <th>JUI</th>
+            <th data-orderable="false">부X외조부X증외조부</th>
+            <th>aAa</th>
+            <th>DMS</th>
+            <th data-orderable="false">Last Proof</th> <!--지움-->
+            <th data-orderable="false">Week</th> <!--지움-->
+            <th data-orderable="false">혈통</th>
 
           </tr>
       </thead>
@@ -235,11 +202,6 @@
       </tfoot> 
   </table>
 
-  <!--
-</div>
-</div>
--->
-</div>
   </div>
 
   </body>
@@ -347,18 +309,14 @@ var dataSet= [
         }
     )
 
-    $("#myTable").DataTable().destroy(); //이전에 만든 것 없애고 다시 그리기 위함.
-
       var table = $('#myTable').DataTable({
         
-        
          // lengthMenu: [ 10 ],
-        lengthMenu: [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
+        //lengthMenu: [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
   
           stateSave: true,
           responsive: true,
           orderMulti: true,
-           paging: true,        //페이징 표시 설정
           pagingType: "full_numbers",
           scrollX: true,
           scrollY:        '50vh',
@@ -376,9 +334,8 @@ var dataSet= [
 
           columns: [
           {title:"씨수소번호"},
-          {title:"명호"},
   {title:"결점형질"},
-
+  {title:"명호"},
   {title:"하플로타입"},
   {title:"베타카제인"},
   {title:"카파카제인"},
@@ -415,10 +372,11 @@ var dataSet= [
                         "targets": "_all"
                       },
                       {
-                            "targets": [7, 10, 18, 30, 31],
-                            "visible": false
-                        },
+			"targets": [7, 10, 18, 30, 31],
+			"visible": false
+		},
                     ],
+                      
                       "language": {
             "emptyTable": "데이터가 없어요.",
             "lengthMenu": "페이지당 _MENU_ 개씩 보기",
@@ -437,7 +395,6 @@ var dataSet= [
 
           dom : 'Blfrtip',
 
-      /*
           buttons:[{
                   extend:'csvHtml5',
                   text: 'Export CSV',
@@ -445,9 +402,7 @@ var dataSet= [
                   bom: true,
                   className: 'exportCSV'
                 }],
-*/
-    //lengthChange: false,
-    buttons: [ 'copy', 'excel', 'pdf', 'colvis' ],
+
 
           data: dataSet
     
@@ -469,22 +424,11 @@ var dataSet= [
     });
 
     /* 날짜검색 이벤트 리바인딩 */
-    /*
     $('#myTable_filter').prepend('<input type="text" id="toDate" placeholder="yyyy-MM-dd"> ');
     $('#myTable_filter').prepend('<input type="text" id="fromDate" placeholder="yyyy-MM-dd">~');
     $('#toDate, #fromDate').unbind().bind('keyup',function(){
         table.draw();
     })
-        */
-
-    table.buttons().container()
-    .appendTo( $('#buttons-menu') )
-    .addClass('ui buttons vertical')
-  
-  // demonstrate how to change styling of buttons
-  //   order of classes matter
-  $('.ui.button', table.buttons().container())
-    .addClass('basic primary')
 
 
     });
